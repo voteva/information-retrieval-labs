@@ -8,11 +8,12 @@ import static org.apache.commons.lang3.ArrayUtils.swap;
 
 public class BubbleSort implements Sorting {
 
+    private int comparisons = 0;
+    private int permutations = 0;
+
     @Nonnull
     @Override
     public SortResult sort(@Nonnull Integer[] items) {
-        int comparisons = 0;
-        int permutations = 0;
 
         for (int i = 0; i < items.length - 1; i++) {
             for (int j = 0; j < items.length - i - 1; j++) {

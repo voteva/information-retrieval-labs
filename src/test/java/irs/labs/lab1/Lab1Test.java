@@ -34,16 +34,7 @@ public class Lab1Test {
                             new BinaryTreeSort(),
                             new QSort());
 
-                    sortingList.forEach(
-                            sorting -> {
-                                SortResult result = sorting
-                                        .sort(copyOf(items, items.length));
-
-                                System.out.println(format("%s: comparisons - %s, permutations - %s",
-                                        sorting.getClass().getSimpleName(),
-                                        result.getComparisons(),
-                                        result.getPermutations()));
-                            });
+                    sortingList.forEach(sorting -> executeSort(sorting, items));
                 });
     }
 
@@ -64,16 +55,7 @@ public class Lab1Test {
                             new BinaryTreeSort(),
                             new QSort());
 
-                    sortingList.forEach(
-                            sorting -> {
-                                SortResult result = sorting
-                                        .sort(copyOf(items, items.length));
-
-                                System.out.println(format("%s: comparisons - %s, permutations - %s",
-                                        sorting.getClass().getSimpleName(),
-                                        result.getComparisons(),
-                                        result.getPermutations()));
-                            });
+                    sortingList.forEach(sorting -> executeSort(sorting, items));
                 });
     }
 
@@ -94,17 +76,18 @@ public class Lab1Test {
                             new BinaryTreeSort(),
                             new QSort());
 
-                    sortingList.forEach(
-                            sorting -> {
-                                SortResult result = sorting
-                                        .sort(copyOf(items, items.length));
-
-                                System.out.println(format("%s: comparisons - %s, permutations - %s",
-                                        sorting.getClass().getSimpleName(),
-                                        result.getComparisons(),
-                                        result.getPermutations()));
-                            });
+                    sortingList.forEach(sorting -> executeSort(sorting, items));
                 });
+    }
+
+    private void executeSort(@Nonnull Sorting sorting, @Nonnull Integer[] items) {
+        SortResult result = sorting
+                .sort(copyOf(items, items.length));
+
+        System.out.println(format("%s: comparisons - %s, permutations - %s",
+                sorting.getClass().getSimpleName(),
+                result.getComparisons(),
+                result.getPermutations()));
     }
 
 

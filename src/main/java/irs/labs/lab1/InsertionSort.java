@@ -6,11 +6,12 @@ import javax.annotation.Nonnull;
 
 public class InsertionSort implements Sorting {
 
+    private int comparisons = 0;
+    private int permutations = 0;
+
     @Nonnull
     @Override
     public SortResult sort(@Nonnull Integer[] items) {
-        int comparisons = 0;
-        int permutations = 0;
 
         int key, j;
         for (int i = 1; i < items.length; i++) {
