@@ -1,0 +1,7 @@
+ext {
+    gsonVersion = "2.8.5"
+    guavaVersion = "23.0"
+    commonsLangVersion = "3.7"
+    findBugsVersion = "3.0.2"
+    lombokVersion = "1.18.2"
+}
