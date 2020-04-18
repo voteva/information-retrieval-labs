@@ -1,10 +1,11 @@
-package irs.labs.lab1;
+package irs.labs.sort;
 
-import irs.labs.lab1.model.SortResult;
+import irs.labs.sort.model.SortResult;
 
 import javax.annotation.Nonnull;
 
-public class InsertionSort implements Sorting {
+public class InsertionSort
+        implements Sortable {
 
     private int comparisons = 0;
     private int permutations = 0;

@@ -1,10 +1,11 @@
-package irs.labs.lab1;
+package irs.labs.sort;
 
-import irs.labs.lab1.model.SortResult;
+import irs.labs.sort.model.SortResult;
 
 import javax.annotation.Nonnull;
 
-public class BinaryTreeSort implements Sorting {
+public class BinaryTreeSort
+        implements Sortable {
 
     private int comparisons = 0;
     private int permutations = 0;
@@ -60,7 +61,6 @@ public class BinaryTreeSort implements Sorting {
         void inorderRec(Node root) {
             if (root != null) {
                 inorderRec(root.left);
-                //System.out.print(root.key + " ");
                 inorderRec(root.right);
             }
         }

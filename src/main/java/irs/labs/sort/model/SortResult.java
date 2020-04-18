@@ -1,4 +1,4 @@
-package irs.labs.lab1.model;
+package irs.labs.sort.model;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

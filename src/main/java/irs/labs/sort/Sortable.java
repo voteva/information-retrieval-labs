@@ -1,10 +1,10 @@
-package irs.labs.lab1;
+package irs.labs.sort;
 
-import irs.labs.lab1.model.SortResult;
+import irs.labs.sort.model.SortResult;
 
 import javax.annotation.Nonnull;
 
-public interface Sorting {
+public interface Sortable {
     @Nonnull
     SortResult sort(@Nonnull Integer[] items);
 }

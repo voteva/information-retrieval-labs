@@ -1,6 +1,11 @@
-package irs.labs.lab1;
+package irs.labs;
 
-import irs.labs.lab1.model.SortResult;
+import irs.labs.sort.BinaryTreeSort;
+import irs.labs.sort.BubbleSort;
+import irs.labs.sort.InsertionSort;
+import irs.labs.sort.QSort;
+import irs.labs.sort.Sortable;
+import irs.labs.sort.model.SortResult;
 import org.junit.Test;
 
 import javax.annotation.Nonnull;
@@ -13,8 +18,7 @@ import static java.util.Arrays.asList;
 import static java.util.Arrays.copyOf;
 import static java.util.Arrays.sort;
 
-public class Lab1Test {
-
+public class SortsTest {
     private static final List<Integer> ARRAY_SIZE_LIST = asList(10, 20, 40);
 
     @Test
@@ -28,7 +32,7 @@ public class Lab1Test {
 
                     Integer[] items = buildArray(size, null);
 
-                    final List<Sorting> sortingList = asList(
+                    final List<Sortable> sortingList = asList(
                             new BubbleSort(),
                             new InsertionSort(),
                             new BinaryTreeSort(),
@@ -49,7 +53,7 @@ public class Lab1Test {
 
                     Integer[] items = buildArray(size, Comparator.comparingInt(a -> a));
 
-                    final List<Sorting> sortingList = asList(
+                    final List<Sortable> sortingList = asList(
                             new BubbleSort(),
                             new InsertionSort(),
                             new BinaryTreeSort(),
@@ -70,7 +74,7 @@ public class Lab1Test {
 
                     Integer[] items = buildArray(size, (a, b) -> b - a);
 
-                    final List<Sorting> sortingList = asList(
+                    final List<Sortable> sortingList = asList(
                             new BubbleSort(),
                             new InsertionSort(),
                             new BinaryTreeSort(),
@@ -80,7 +84,7 @@ public class Lab1Test {
                 });
     }
 
-    private void executeSort(@Nonnull Sorting sorting, @Nonnull Integer[] items) {
+    private void executeSort(@Nonnull Sortable sorting, @Nonnull Integer[] items) {
         SortResult result = sorting
                 .sort(copyOf(items, items.length));
 

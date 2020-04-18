@@ -1,12 +1,13 @@
-package irs.labs.lab1;
+package irs.labs.sort;
 
-import irs.labs.lab1.model.SortResult;
+import irs.labs.sort.model.SortResult;
 
 import javax.annotation.Nonnull;
 
 import static org.apache.commons.lang3.ArrayUtils.swap;
 
-public class BubbleSort implements Sorting {
+public class BubbleSort
+        implements Sortable {
 
     private int comparisons = 0;
     private int permutations = 0;
